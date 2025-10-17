@@ -4,4 +4,5 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def saludo(request):
-    return HttpResponse("Hola Django - Coder")
+    contexto = {'mensaje': 'Hola Django - Coder'} 
+    return render(request, 'miapp/saludo.html', contexto)
